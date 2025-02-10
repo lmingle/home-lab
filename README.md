@@ -1,4 +1,4 @@
-# Pi Kubernetes Cluster
+# <s>Pi</s> Kubernetes Cluster (forked from [ricsanfre](https://github.com/ricsanfre/pi-cluster))
 
 <img src="docs/assets/img/picluster-logo.png" width="200" />
 
@@ -13,7 +13,7 @@
 **K3S Kubernetes Cluster at home automated with Ansible and FluxCD**
 
 
-This is an educational project to build a hybrid x86/ARM Kubernetes cluster at home, using Raspberry Pi and refurbished x86 mini PCs, learn to deploy basic kubernetes services and automate its deployment and configuration applying IaC (infrastructure as a code) and GitOps methodologies.
+This is an educational project to build a hybrid x86<s>/ARM</s> Kubernetes cluster at home, using refurbished x86 mini PCs, learn to deploy basic kubernetes services and automate its deployment and configuration applying IaC (infrastructure as a code) and GitOps methodologies.
 
 
 The entire process for creating this cluster at home, from cluster design and architecture to step-by-step manual configuration guides, has been documented and it is published in the project website: https://picluster.ricsanfre.com.
@@ -24,7 +24,7 @@ Since its deployment is completely automated, the cluster can be re-deployed in 
 
 ## Scope
 
-The scope of this project is to build a hybrid x86/ARM kubernetes cluster at home, using low cost Raspeberry PIs and old refurbished mini PCs, and automate its deployment and configuration applying **IaC (infrastructure as a code)** and **GitOps** methodologies with tools like [Ansible](https://docs.ansible.com/), [cloud-init](https://cloudinit.readthedocs.io/en/latest/) and [Flux CD](https://fluxcd.io/).
+The scope of this project is to build a <s>hybrid</s> x86<s>/ARM</s> kubernetes cluster at home, using old refurbished mini PCs, and automate its deployment and configuration applying **IaC (infrastructure as a code)** and **GitOps** methodologies with tools like [Ansible](https://docs.ansible.com/), [cloud-init](https://cloudinit.readthedocs.io/en/latest/) and [Flux CD](https://fluxcd.io/).
 
 As part of the project, the goal is to use a lightweight Kubernetes flavor based on [K3S](https://k3s.io/) and deploy cluster basic services such as:
 - Distributed block storage for POD's persistent volumes, [LongHorn](https://longhorn.io/).
@@ -235,7 +235,7 @@ The following picture shows the set of opensource solutions used so far in the c
 
 ## External Resources and Services
 
-Even whe the premise is to deploy all services in the kubernetes cluster, there is still a need for a few external services/resources. Below is a list of external resources/services and why we need them.
+Even when the premise is to deploy all services in the kubernetes cluster, there is still a need for a few external services/resources. Below is a list of external resources/services and why we need them.
 
 ### Cloud external services
 
@@ -274,11 +274,11 @@ Vault service is running in `gateway` node, since Vault kubernetes authenticatio
 
 ## Cluster architecture and hardware
 
-Home lab architecture, showed in the picture below, consist of a Kubernetes cluster of ARM (Rasbperry PI) and x86 (HP elitedesk 800 G3 mini PCs) nodes and a firewall, built with another Raspberry PI, to isolate cluster network from your home network.
+Home lab architecture, showed in the picture below, consist of a Kubernetes cluster of x86 (HP elitedesk 705 G3/G4 mini PCs) nodes and a firewall, built with a fitlet2 to isolate cluster network from your home network.
 
 
 <p align="center">
-  <img src="docs/assets/img/pi-cluster-architecture.png" width="500"/>
+  <img src="docs/assets/img/architecture.png" width="500"/>
 </p>
 
 
@@ -296,4 +296,4 @@ Check out the documentation [Quick Start guide](http://picluster.ricsanfre.com/d
 
 ## About the Project
 
-This project was started in June 2021 by Ricardo Sanchez
+The base project was started in June 2021 by Ricardo Sanchez and I created my fork in Feb 2024
