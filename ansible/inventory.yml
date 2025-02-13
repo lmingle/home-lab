@@ -14,66 +14,65 @@ all:
           ansible_host: s3.ricsanfre.com
     picluster:
       hosts:
-        node1:
+        node1:  # AMD Ryzen 3 Pro, 256GB M.2, 480GB SATA SSD, 1 x 8GB SODIMM
           hostname: node1
           ansible_host: 10.0.0.11
           ip: 10.0.0.11
-          mac: dc:a6:32:9c:29:b9
-        node2:
+          mac: b0:5c:da:38:18:13
+        node2:  # AMD Ryzen 3 Pro, 256GB M.2, 500GB SATA HDD, 1 x 8GB SODIMM
           hostname: node2
           ansible_host: 10.0.0.12
           ip: 10.0.0.12
-          mac: e4:5f:01:2d:fd:19
-        node3:
+          mac: b0:5c:da:39:46:22
+        node3:  # AMD Ryzen 3 Pro, 256GB M.2, 500GB SATA HDD, 1 x 8GB SODIMM
           hostname: node3
           ansible_host: 10.0.0.13
           ip: 10.0.0.13
-          mac: e4:5f:01:2f:49:05
-        node4:
+          mac: b0:5c:da:38:12:61
+        node4:  # AMD Ryzen 5 Pro, 256GB M.2, 500GB SATA HDD, 1 x 16GB SODIMM
           hostname: node4
           ansible_host: 10.0.0.14
           ip: 10.0.0.14
-          mac: e4:5f:01:2f:54:82
-        node5:
+          mac: b0:0c:d1:53:97:ce
+        node5:  # AMD Ryzen 5 Pro, 256GB M.2, 500GB SATA HDD, 1 x 16GB SODIMM
           hostname: node5
           ansible_host: 10.0.0.15
           ip: 10.0.0.15
-          mac: e4:5f:01:d9:ec:5c
-        node6:
+          mac: b0:0c:d1:53:8d:f3
+        node6:  # AMD Ryzen 5 Pro, 256GB M.2, 500GB SATA HDD, 2 x 8GB SODIMM
           hostname: node6
           ansible_host: 10.0.0.16
           ip: 10.0.0.16
-          mac: d8:3a:dd:0d:be:c8
-        node-hp-1:
-          hostname: node-hp-1
-          ansible_host: 10.0.0.20
-          ip: 10.0.0.20
-          mac: 18:60:24:21:1c:d4
-        node-hp-2:
-          hostname: node-hp-2
-          ansible_host: 10.0.0.21
-          ip: 10.0.0.21
-          mac: 10:e7:c6:16:54:10
-        node-hp-3:
-          hostname: node-hp-3
-          ansible_host: 10.0.0.22
-          ip: 10.0.0.22
-          mac: 10:e7:c6:0a:de:8a
-    raspberrypi:
-      hosts:
-        node[1:6]:
+          mac: 80:e8:2c:20:58:0c
+        node-hp-7:  # AMD Ryzen 5 Pro, 256GB M.2, 500GB SATA HDD, 2 x 8GB SODIMM
+          hostname: node7
+          ansible_host: 10.0.0.17
+          ip: 10.0.0.17
+          mac: 7c:57:58:0e:48:56
+        #node8:
+        #  hostname: node8
+        #  ansible_host: 10.0.0.18
+        #  ip: 10.0.0.18
+        #  mac: d8:3a:dd:0d:be:c8
+        #node9:
+        #  hostname: node9
+        #  ansible_host: 10.0.0.19
+        #  ip: 10.0.0.19
+        #  mac: d8:3a:dd:0d:be:c8
+    #raspberrypi:
+    #  hosts:
+    #    node[1:6]:
     x86:
       hosts:
-        node-hp-[1:3]:
+        node[1:7]:
     k3s_cluster:
       children:
         k3s_master:
           hosts:
-            node[2:4]:
+            node[1:3]:
         k3s_worker:
           hosts:
-            node[5:6]:
-            node-hp-[1:3]:
+            node[4:7]:
     dns:
       hosts:
         node1:
